@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <p>
+        SPLI
+        <br />
+        TTER
+      </p>
+    </header>
+
+    <section class="flex">
+      <div>
+        <div class="bill-wrap flex my-3">
+          <p>Bill</p>
+          <p id="bill-error" class="hide">Can't be zero</p>
+        </div>
+
+        <form action="/" class="flex">
+          <p>$</p>
+          <input type="text" placeholder="0" id="bill" />
+        </form>
+        <div>
+          <div>
+            <p>Select Tip %</p>
+            <div class="grid grid-2 tip-percent-field">
+              <p class="btn" id="five" data-tip="5">5%</p>
+              <p class="btn" id="ten" data-tip="10">10%</p>
+              <p class="btn" id="fifteen" data-tip="15">15%</p>
+              <p class="btn" id="twentyFive" data-tip="25">25%</p>
+              <p class="btn" id="fifty" data-tip="50">50%</p>
+              <input
+                type="text"
+                class="btn"
+                placeholder="Custom"
+                id="custom-tip"
+              />
+            </div>
+            <div class="people-wrap flex my-3">
+              <p>Number of People</p>
+              <p id="people-error" class="hide">Can't be zero</p>
+            </div>
+
+            <form action="" class="flex">
+              <div class="image-wrap">
+                <img src="images/icon-person.svg" alt="person" />
+              </div>
+
+              <input type="text" placeholder="0" id="people" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="dark-bg flex">
+        <div class="flex">
+          <div>
+            <p>Tip Amount</p>
+            <p class="faint-text">/ person</p>
+          </div>
+          <p class="amount" id="tipTotal">$0.00</p>
+        </div>
+        <div class="flex">
+          <div>
+            <p>Total</p>
+            <p class="faint-text">/ person</p>
+          </div>
+          <p class="amount" id="total">$0.00</p>
+        </div>
+        <button id="reset">RESET</button>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
